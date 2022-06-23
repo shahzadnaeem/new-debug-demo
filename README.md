@@ -31,7 +31,7 @@ It shows part of the active `debug.js` tab in the `Editor`
 - Open the `debug.js` file in the `Explorer`
 - Switch to `Run and Debug`
 
-You should see something similar to the following image. Please note the red circles to the left of lines 50 and 61 in the `Editor`. These are `breakpoints` and program executions will stop at these when `debug.js` is run using the `Debugger`
+You should see something similar to the following image. Please note the red circles to the left of lines 50 and 61 in the `Editor`. These are `breakpoints` and program executions will stop at these when `debug.js` is run using the `Debugger`. If you do not see the `breakpoints` you can add/remove them by hovering you mouse to the left of a line number and click.
 
 ![Initial Debug](images/Initial-Debug.png)
 
