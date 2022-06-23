@@ -2,6 +2,8 @@
 
 ## Setup Steps
 
+The following steps were followed to create this repository. You do not need to do this as all of the files mentioned below now exist.
+
 - Add this README.md file
 - Add debug.js file to demo debugging a single JS file
 - Add Jasmine
@@ -11,6 +13,11 @@
 - Add "test": "jasmine" script to package.json
 - Create a simple Jasmine test spec
   - spec/test.spec.js
+
+## Install NPM Modules
+
+- Run the following command in a Terminal to install the required NPM modules
+  - `npm install`
 
 ## VSCode Intro
 
