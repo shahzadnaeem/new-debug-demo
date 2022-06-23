@@ -8,3 +8,4 @@
   - npm add jasmine --save-dev
   - npx jasmine init
 - Add .gitignore to exclude `node_modules`
+- Add "test": "jasmine" script to package.json
