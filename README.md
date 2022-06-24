@@ -1,8 +1,8 @@
 # Debug Demo
 
-## Setup Steps
+### Setup Steps (FOR REFERENCE ONLY)
 
-The following steps were followed to create this repository. You do not need to do this as all of the files mentioned below now exist.
+**The following steps were followed to create this repository. You do not need to do this as all of the files mentioned below now exist.**
 
 - Add this README.md file
 - Add debug.js file to demo debugging a single JS file
@@ -14,7 +14,7 @@ The following steps were followed to create this repository. You do not need to 
 - Create a simple Jasmine test spec
   - spec/test.spec.js
 
-## Install NPM Modules
+## Start Here
 
 - Run the following command in a Terminal to install the required NPM modules
   - `npm install`
