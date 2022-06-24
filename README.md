@@ -66,4 +66,26 @@ Note that when the debugger is running, the VSCode status bar background colour 
 
 We can now start using the debugger to examine the execution of our program, step by step.
 
+We do this using the `Debugger Controls` shown above - top middle
+
+The `controls` are (left to right, starting with the blue play/pause icon)
+
+- Continue - continue running the program until the next `breakpoint` or the end
+- Step Over - step over the current line (does not enter any function(s) called in the line)
+- Step Into - steps into the first function call on the current line
+- Step Out - when you have stepped into a function, you can step out to where it was called from
+- Restart - restart the program
+- Stop - stop the program and the debugger
+
+Using the `controls` and the information to the left of the `Editor` you can get an exact understanding of what a program is doing at any point.
+
 ## Debugging Jasmine tests
+
+TODO: Adding a Launch Configuration
+
+- Node.js: Launch via NPM
+- Updating the new configuration
+  - To run `npm test`
+  - To ensure that Jasmine test output is display in a Terminal
+- Add breakpoint to `spec/test.spec.js` and give it a try!
+
