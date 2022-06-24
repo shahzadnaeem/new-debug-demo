@@ -1,6 +1,6 @@
 # Debug Demo
 
-### Setup Steps (FOR REFERENCE ONLY)
+## DO NOT RUN THE FOLLOWING - For Reference Only
 
 **The following steps were followed to create this repository. You do not need to do this as all of the files mentioned below now exist.**
 
@@ -13,6 +13,10 @@
 - Add "test": "jasmine" script to package.json
 - Create a simple Jasmine test spec
   - spec/test.spec.js
+
+## Links
+
+[VSCode Node.js Debugging Page](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 
 ## Start Here
 

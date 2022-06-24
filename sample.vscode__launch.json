@@ -1,0 +1,26 @@
+{
+    "configurations": [
+    {
+        "name": "Jasmine tests",
+        "request": "launch",
+        "runtimeArgs": [
+            "test"
+        ],
+        "runtimeExecutable": "npm",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "node",
+        "console": "integratedTerminal"
+    },
+    {
+        "name": "debug.js",
+        "program": "${workspaceFolder}/debug.js",
+        "request": "launch",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "node",
+    }
+    ]
+}
