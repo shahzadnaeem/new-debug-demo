@@ -35,9 +35,9 @@ It also shows part of the active `debug.js` tab in the `Editor` on the right
 - Open the `debug.js` file in the `Explorer`
 - Switch to `Run and Debug`
 
-You should see something similar to the following image. Please note the red circles to the left of lines 50 and 61 in the `Editor`. These are `breakpoints` and program execution will stop at these when `debug.js` is run using the `Debugger`.
+You should see something similar to the following image. Please note the red circles to the left of lines 50 and 61 in the `Editor`. These are `breakpoints` and program execution will stop at these when `debug.js` is run using the `Debugger`
 
-You can add the missing `breakpoints` add them by hovering your mouse to the left of a line number (50 and 61 in our case) and clicking when you see a dark red circle appear. Clicking again will remove a breakpoint.
+You can add the missing `breakpoints` add them by hovering your mouse to the left of a line number (50 and 61 in our case) and clicking when you see a dark red circle appear. Clicking again will remove a breakpoint
 
 Please ensure that lines 50 and 61 have a `breakpoint`.
 
@@ -45,9 +45,9 @@ Please ensure that lines 50 and 61 have a `breakpoint`.
 
 - Click on the `create a launch.json file`
 - Select `Node.js` as the `debugger`
-- Now select the entry `{} Node.js: Launch Program` from the displayed list.
+- Now select the entry `{} Node.js: Launch Program` from the displayed list
 
-This will create a file called `launch.json` that contains the information to debug files in your project.
+This will create a file called `launch.json` that contains the information to debug files in your project
 
 - Modify the value of the `"name"` property of the configuration you have just added to `"debug.js"` and save your changes
   - It should look like this
@@ -57,21 +57,23 @@ This will create a file called `launch.json` that contains the information to de
     "name": "debug.js"
     ...
     ```
-- We have now completed the setup required to start debugging. The `launch.json` should look something like the image below.
+- We have now completed the setup required to start debugging. The `launch.json` should look something like the image below
 
 ![debug.js config](images/debug.js-config.png)
 
 - Now go back to the `debug.js` tab and click the small green play icon to the left of the configuration name of `debug.js`
 
-Once you have started the debugger, it will run until it reaches the first `breakpoint` - which is on line 50. You should see something like the image below.
+Once you have started the debugger, it will run until it reaches the first `breakpoint` - which is on line 50. You should see something like the image below
 
 ![debugging](images/debugging.png)
 
-Note that when the debugger is running, the VSCode status bar background colour changes to orange.
+Note that when the debugger is running, the VSCode status bar background colour changes to orange
 
-We can now start using the debugger to examine the execution of our program, step by step.
+We can now start using the debugger to examine the execution of our program, step by step
 
-We do this using the `Debugger Controls` shown above - top middle
+We do this using the `Debugger Controls` shown above - top middle - and also shown below
+
+![Debugger Controls](images/debug-controls.png)
 
 The `controls` are (left to right, starting with the blue play/pause icon)
 
@@ -82,11 +84,11 @@ The `controls` are (left to right, starting with the blue play/pause icon)
 - Restart - restart the program
 - Stop - stop the program and the debugger
 
-Using the `controls` and the information to the left of the `Editor` you can get an exact understanding of what a program is doing at any point.
+Using the `controls` and the information to the left of the `Editor` you can get an exact understanding of what a program is doing at any point
 
 ## Debugging Jasmine tests
 
-To debug `Jasmine` tests that are run using the `npm test` command, a new `Configuration`
+To debug `Jasmine` tests that are run using the `npm test` command, a new `Configuration` is required
 
 - Switch to `Run and Debug` to add a new `Configuration`
 - Now click on the `Cog` icon to open the `launch.json` file
@@ -104,8 +106,8 @@ To debug `Jasmine` tests that are run using the `npm test` command, a new `Confi
     "console": "integratedTerminal"
     ```
 
-Now that we have a `Configuration` to run `Jasmine` tests, we can add a breakpoint to the `spec/test.spec.js` file so that we can debug a test! Add a breakpoint at line 30 - this has many function calls on a single line.
+Now that we have a `Configuration` to run `Jasmine` tests, we can add a breakpoint to the `spec/test.spec.js` file so that we can debug a test! Add a breakpoint at line 30 - this has many function calls on a single line
 
-To debug the tests, switch to `Run and Debug` and then select `Jasmine tests` from the dropdown list and click the small green play icon to the left.
+To debug the tests, switch to `Run and Debug` and then select `Jasmine tests` from the dropdown list and click the small green play icon to the left
 
-The debugger should stop at the breakpoint at line 50 and now we can use the `Step In` and `Step Out` controls so see how each function is being called on the line and in what order. You should see execution switching between files as the `add` and `multiply` functions are being called.
+The debugger should stop at the breakpoint at line 50 and now we can use the `Step In` and `Step Out` controls so see how each function is being called on the line and in what order. You should see execution switching between files as the `add` and `multiply` functions are being called
