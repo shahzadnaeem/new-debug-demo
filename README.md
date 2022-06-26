@@ -26,7 +26,7 @@
 ## VSCode Intro
 
 The following image shows a VSCode window with the `Explorer` and `Run and Debug` buttons in the `Activity Bar`.
-It shows part of the active `debug.js` tab in the `Editor`
+It also shows part of the active `debug.js` tab in the `Editor` on the right
 
 ![VSCode Intro](images/VSCode-Intro.png)
 
@@ -35,12 +35,17 @@ It shows part of the active `debug.js` tab in the `Editor`
 - Open the `debug.js` file in the `Explorer`
 - Switch to `Run and Debug`
 
-You should see something similar to the following image. Please note the red circles to the left of lines 50 and 61 in the `Editor`. These are `breakpoints` and program executions will stop at these when `debug.js` is run using the `Debugger`. If you do not see the `breakpoints` you can add/remove them by hovering you mouse to the left of a line number and click.
+You should see something similar to the following image. Please note the red circles to the left of lines 50 and 61 in the `Editor`. These are `breakpoints` and program execution will stop at these when `debug.js` is run using the `Debugger`.
+
+You can add the missing `breakpoints` add them by hovering your mouse to the left of a line number (50 and 61 in our case) and clicking when you see a dark red circle appear. Clicking again will remove a breakpoint.
+
+Please ensure that lines 50 and 61 have a `breakpoint`.
 
 ![Initial Debug](images/Initial-Debug.png)
 
 - Click on the `create a launch.json file`
 - Select `Node.js` as the `debugger`
+- Now select the entry `{} Node.js: Launch Program` from the displayed list.
 
 This will create a file called `launch.json` that contains the information to debug files in your project.
 
@@ -81,11 +86,26 @@ Using the `controls` and the information to the left of the `Editor` you can get
 
 ## Debugging Jasmine tests
 
-TODO: Adding a Launch Configuration
+To debug `Jasmine` tests that are run using the `npm test` command, a new `Configuration`
 
-- Node.js: Launch via NPM
-- Updating the new configuration
-  - To run `npm test`
-  - To ensure that Jasmine test output is display in a Terminal
-- Add breakpoint to `spec/test.spec.js` and give it a try!
+- Switch to `Run and Debug` to add a new `Configuration`
+- Now click on the `Cog` icon to open the `launch.json` file
+- You can now click the blue `Add Configuration...` button
+- This time, choose `{} Node.js: Launch via npm`
+- Now, we edit the newly added `Configuration` to run our `Jasmine` tests using `npm test`
+  - Update `"name"` and `"runtimeArgs"` propeties so that they are as shown below - you will need to add the `"console": ...` line
 
+    ```json
+    "name": "Jasmine tests",
+    
+    "runtimeArgs": [
+        "test"
+    ],
+    "console": "integratedTerminal"
+    ```
+
+Now that we have a `Configuration` to run `Jasmine` tests, we can add a breakpoint to the `spec/test.spec.js` file so that we can debug a test! Add a breakpoint at line 30 - this has many function calls on a single line.
+
+To debug the tests, switch to `Run and Debug` and then select `Jasmine tests` from the dropdown list and click the small green play icon to the left.
+
+The debugger should stop at the breakpoint at line 50 and now we can use the `Step In` and `Step Out` controls so see how each function is being called on the line and in what order. You should see execution switching between files as the `add` and `multiply` functions are being called.
